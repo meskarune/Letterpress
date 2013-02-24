@@ -17,23 +17,17 @@
 	<link rel="stylesheet" href="/css/animations.css" />
     </head>
 <body>
-  <header role="banner">
-    <div class="container">
-      <a href="/" class="logo"><img src="/img/logo@2x.png" alt="Logo" /></a>
-      <p class="about">I am Ling Wang, an independent iOS developer living in US, originally from China. I make <a href="http://moke.com">Moke</a> and <a href="http://iwonderphone.com">Voodo</a>.</p>
-      <ul class="headlinks">
-        <li class="twitter">
-            <a href="http://twitter.com/meskarune"><img src="/img/twitter.png" alt="Twitter" /></a>
-        </li>
-	<li class="github">
-	    <a href="http://github.com/meskarune"><img src="/img/github.png" alt="GitHub" /></a>
-	</li>
-      </ul>
-    </div>
-  </header>
-
-  <section role="main" class="container">
-		{{#posts}}
+    <aside>
+    	<a href="/" target="blank"><img src="/assets/images/sitting.png" alt="logo" id="top"></a>
+    	<nav>
+    	    <a href="http://twitter.com/meskarune" title="Twitter">Twitter</a>
+    	</nav>
+    </aside>
+    <div id="content">
+        <header>
+        	<h2>Meskarune's Meanderings</h2>
+        </header>
+    	{{#posts}}
 	  <article>
 	    <header>
 	        <p class="meta"><time datetime="{{date}}">{{pretty_date}}</time></p>
@@ -43,18 +37,14 @@
 	      <p class="intro">{{excerpt}}</p>
 	    </section>
 	  </article>
-	  {{/posts}}
-  </section>
-  
+	{{/posts}}
 	<nav class="archive footer container">
-		<h1><a class="nav-prev" href="{{prev_archive_url}}">{{prev_archive_title}}</a></h1>
-		<h1><a class="nav-next" href="{{next_archive_url}}">{{next_archive_title}}</a></h1>
+            <h1><a class="nav-prev" href="{{prev_archive_url}}">{{prev_archive_title}}</a></h1>
+            <h1><a class="nav-next" href="{{next_archive_url}}">{{next_archive_title}}</a></h1>
 	</nav>
-	
-  <footer id="footer">
-    <section class="container">
+    </div>
+  <footer>
       <p>Powered by <a href="https://github.com/an0/Letterpress">Letterpress</a>.</p>
-    </section>
   </footer>
 </body>
 </html>
