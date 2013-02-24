@@ -3,18 +3,17 @@ Letterpress is a minimal, [Markdown](http://daringfireball.net/projects/markdown
 
 #Arch Linux Installation
 
-Install required dependancies, save blog template files to ~/Documents/letterpress and save the letterpress.py and markdown.py files to /usr/local/bin.
+Install required dependancies, save blog template files to ~/Documents/letterpress and save the letterpress.py file to /usr/local/bin.
 ```
-pacman -S python-pyinotify python-pygments
+pacman -S python-pyinotify python-pygments python-markdown
 
 mkdir ~/Documents/letterpress
 
 cd ~/git
-git clone https://github.com/an0/Letterpress.git
+git clone https://github.com/meskarune/Letterpress.git
 
 cp ~/git/Letterpress.git/press/* ~/Documents/letterpress
 cp ~/git/Letterpress.git/code/letterpress.py /usr/local/bin/letterpress.py
-wget -O /usr/local/bin https://raw.github.com/an0/python-markdown2/master/lib/markdown2.py
 ```
 Edit the configuration file in ~/Documents/letterpress/letterpress.conf
 
